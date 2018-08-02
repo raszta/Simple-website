@@ -1,0 +1,9 @@
+@mixin button{
+  position: absolute;
+  top: 35%;
+  background-color: transparent;
+  border: none;
+  font-size: 70px;
+  margin: 20px;
+  color: var(--main-background);
+};
