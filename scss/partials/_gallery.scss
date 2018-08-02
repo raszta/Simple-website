@@ -1,0 +1,30 @@
+.gallery{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 20px;
+
+
+
+.gallery__div--1{
+    background-image: url(../images/box1_img.jpg);
+    height: 250px;
+    flex-basis: 33.332%;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.gallery__div--2{
+    background-image: url(../images/box2_img.jpg);
+    height: 250px;
+    flex-basis: 33.332%;
+    background-size: cover;
+    margin-right: 10px;
+}
+
+.gallery__div--3{
+    background-image: url(../images/orange_chair.png);
+    height: 250px;
+    flex-basis: 33.332%;
+    background-size: cover;
+}
+}
