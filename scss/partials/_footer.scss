@@ -1,0 +1,28 @@
+.footer{
+  height: 4vh;
+
+  &__rights{
+    display: flex;
+  }
+
+  &__headline{
+    text-align: left;
+    color: #b8c1d6;
+  }
+
+  &__end{
+    display: flex;
+
+  }
+  &__gallery{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  &__logo{
+    color: #b8c1d6;
+    margin-left: 50px;
+    font-size: 30px;
+  }
+
+}

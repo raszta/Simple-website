@@ -7,3 +7,33 @@
   margin: 20px;
   color: var(--main-background);
 };
+
+@mixin box{
+  height: 70vh;
+  width: 25vw;
+  display: flex;
+  border-radius: 5px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+};
+
+@mixin circle-small{
+  border-radius: 60%;
+  content: "";
+  position: absolute;
+  bottom: 98%;
+  left: 44.74%;
+  z-index: 1;
+  height: 40px;
+  width: 40px;
+};
+
+@mixin circle-big{
+  content: "";
+  border-radius: 60%;
+  height: 80px;
+  width: 80px;
+  position: absolute;
+  bottom: 95%;
+  left: 40%;
+};
