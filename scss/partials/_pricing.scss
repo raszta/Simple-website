@@ -140,6 +140,7 @@
     border: 2px solid #dbe6fc;
     position: absolute;
     top: 25%;
+
   }
 
   &__button{
@@ -155,7 +156,12 @@
     font-size: 40px;
     position: absolute;
     top:15%;
-    left: 20%;
+    left: 30%;
+    text-align: center;
+
+    .pricing__month{
+      font-size: 20px;
+    }
   }
 
   &__button--greenBck{
