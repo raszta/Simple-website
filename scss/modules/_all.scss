@@ -13,8 +13,8 @@
   width: 25vw;
   display: flex;
   border-radius: 5px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 };
 
 @mixin circle-small{
@@ -36,4 +36,24 @@
   position: absolute;
   bottom: 95%;
   left: 40%;
+};
+
+@mixin option1{
+  background: #d0d9ef;
+  width: 100%;
+  text-align: center;
+  height: 60px;
+  padding: 15px;
+  font-size: 35px;
+  position: absolute;
+};
+
+@mixin option2{
+  background: #d9e2f7;
+  width: 100%;
+  text-align: center;
+  height: 60px;
+  padding: 15px;
+  font-size: 35px;
+  position: absolute;
 };

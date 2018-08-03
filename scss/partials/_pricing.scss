@@ -9,7 +9,14 @@
     font-size: 40px;
     width: 25vw;
     border-bottom: 6px solid var(--main-background);
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
+  }
+
+  &__title{
+    position: absolute;
+    top: 10%;
+    font-size: 30px;
+    color: #fff;
   }
 
   &__basic:before{
@@ -32,6 +39,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    .pricing__options:first-of-type{
+      @include option1;
+      top: 50%;
+    }
+    .pricing__options:last-of-type{
+      @include option2;
+      top: 58.5%;
+    }
+
+    .pricing__title{
+      color: var(--main-background);
+    }
   }
 
   &__standard:before{
@@ -54,6 +74,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    .pricing__options:first-of-type{
+      @include option1;
+      top: 50%;
+      background: #fff;
+    }
+    .pricing__options:nth-of-type(2){
+      @include option2;
+      top: 58.5%;
+    }
+    .pricing__options:nth-of-type(3){
+      @include option1;
+      top: 67%;
+      background: #fff;
+    }
   }
 
   &__pro:before{
@@ -76,20 +110,61 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
 
-  &__title{
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 30px;
+    .pricing__options:first-of-type{
+      @include option1;
+      top: 50%;
+    }
+    .pricing__options:nth-of-type(2){
+      @include option2;
+      top: 58.5%;
+    }
+    .pricing__options:nth-of-type(3){
+      @include option1;
+      top: 67%;
+    }
+    .pricing__options:last-of-type{
+      @include option2;
+      top: 75.5%;
+    }
+
+    .pricing__title{
+      color: var(--main-background);
+    }
   }
 
   &__offer{
     border-radius: 70%;
     height: 15vh;
-    width: 10vw;
+    width: 15vw;
     border: 2px solid #dbe6fc;
+    position: absolute;
+    top: 25%;
   }
 
+  &__button{
+    border-radius: 10px;
+    width: 35%;
+    height: 3rem;
+    font-size: 30px;
+    position: absolute;
+    top: 90%;
+  }
+
+  &__price{
+    font-size: 40px;
+    position: absolute;
+    top:15%;
+    left: 20%;
+  }
+
+  &__button--greenBck{
+    background: var(--main-background);
+    color: #fff;
+  }
+  &__button--whiteBck{
+    background: #fff;
+    color: var(--main-background);
+  }
 
 }
