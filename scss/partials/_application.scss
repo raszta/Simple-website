@@ -4,12 +4,12 @@
   height: 50vh;
   width: 100%;
 }
-.application h3 {
+.application__headline {
   color: #575757;
   font-size: 18px;
 }
 
-.application header.align_right{
+.application__align-right{
   text-align: right;
 }
 
@@ -22,10 +22,10 @@
 }
 
 
-.form {
+.application__form {
   margin-top:50px;
 }
-.drop_down_list {
+.application__drop-down-list {
   border:1px solid #8de0d2;
   width: 280px;
   height:38px;
@@ -35,18 +35,18 @@
   position: relative;
 }
 
-.list_label {
+.application__list_label {
   font-size: 30px;
   color: #e2e2e2;
   font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
 }
 
 
-.checkbox {
+.application__checkbox {
   position: relative;
   padding: 30px 30px 30px 0;
 }
-.checkbox input {
+.application__checkbox-input {
   display: block;
   opacity: 0;
   height: 48px;
@@ -55,7 +55,7 @@
   cursor: pointer;
 }
 
-.checkbox label {
+.application__checkbox-label {
   display: block;
   padding-left: 65px;
   position: relative;
@@ -66,7 +66,7 @@
   cursor: pointer;
 }
 
-.checkbox label::before, .checkbox label::after {
+.application__checkbox-label::before, .application__checkbox-label::after {
   border: 1px solid #27c7ab;
   content: "";
   display: block;
@@ -76,13 +76,13 @@
   width: 48px;
   top: 0;
 }
-.checkbox label::after {
+.application__checkbox-label::after {
   background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A") no-repeat center;
   border: 0;
   display: none;
 }
 
-.checkbox input:checked + label::after {
+.application__checkbox-input:checked + .application__checkbox-label::after {
   display: block;
 }
 
@@ -101,13 +101,13 @@
   margin-left: 15px;
   color: #aeaeae;
 }
-.image_part img{
+.application__image-part-image{
   margin-top: 110px;
   margin-left: 38px;
 }
 
 
-.application .green_bell {
+.application__green_bell {
   background-color: #24baa0;
   width: 280px;
   height: 6px;
@@ -115,7 +115,7 @@
   margin: 5px 0 5px 0;
 }
 
-.summary_panel {
+.application__summary-panel {
   background-color: white;
   width:100%;
   height:195px;
@@ -124,7 +124,7 @@
 
 }
 
-.application .green_button {
+.application__green-button {
   background-color: #27c7ab;
   color: white;
   text-align:center;
@@ -139,7 +139,7 @@
   border-radius: 8px;
   text-decoration: none;
 }
-.panel_left {
+.application__panel-left {
   display: inline-block;
   width: 185px;
   vertical-align: top;
@@ -148,7 +148,7 @@
   height: 135px;
 }
 
-.panel_right {
+.application__panel_right {
   display: inline-block;
   width: 100px;
   border-left:1px solid #e7e7e7;
@@ -158,26 +158,26 @@
   border-bottom:1px solid #e7e7e7;
   height: 135px;
 }
-
-.panel_left h4 , .panel_right h4{
+.application__title {
+  height: 30px;
   color: #24baa0;
   font-size: 23px;
 }
 
-.panel_left span{
+.application__panel-left--option{
   margin-top:10px;
   font-size: 22px;
   color: #5b5a5a;
   display: block;
 }
 
-.panel_right span {
+.application__panel_right--option {
   display: block;
   font-size: 22px;
   color: #24baa0;
   margin-top:10px;
 }
-.sum_label{
+.application__sum_label{
   display: inline-block;
   width: 185px;
   margin-top: 10px;
@@ -185,7 +185,7 @@
   color: #5b5a5a;
 }
 
-.sum {
+.application__sum {
   display: inline-block;
   width: 100px;
   text-align: right;
@@ -194,7 +194,7 @@
   color: #24baa0;
 }
 
-.list_arrow {
+.application__list_arrow {
   width: 0;
   height: 0;
   border-left: 15px solid transparent;
@@ -207,7 +207,7 @@
   cursor: pointer;
 }
 
-.list_panel {
+.application__list-panel {
   background-color: white;
   border: 1px solid #ccc;
   width: 288px;
@@ -221,12 +221,9 @@
   top: 54px;
   display:none;
 }
-.list_panel li {
+.application__list-panel-item {
   margin-top:10px;
   cursor: pointer;
   color: #585858;
 }
 
-.title {
-  height: 30px;
-}
