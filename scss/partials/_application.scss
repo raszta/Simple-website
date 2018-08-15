@@ -67,7 +67,7 @@
 }
 
 .application__checkbox-label::before, .application__checkbox-label::after {
-  border: 1px solid #27c7ab;
+  border: 1px solid var(--main-background);
   content: "";
   display: block;
   left: 0;
@@ -108,7 +108,7 @@
 
 
 .application__green_bell {
-  background-color: #24baa0;
+  background-color: var(--main-background);
   width: 280px;
   height: 6px;
   display: inline-block;
@@ -125,7 +125,7 @@
 }
 
 .application__green-button {
-  background-color: #27c7ab;
+  background-color: var(--main-background);
   color: white;
   text-align:center;
   text-transform: uppercase;
@@ -160,7 +160,7 @@
 }
 .application__title {
   height: 30px;
-  color: #24baa0;
+  color: var(--main-background);
   font-size: 23px;
 }
 
@@ -174,7 +174,7 @@
 .application__panel_right--option {
   display: block;
   font-size: 22px;
-  color: #24baa0;
+  color: var(--main-background);
   margin-top:10px;
 }
 .application__sum_label{
@@ -191,7 +191,7 @@
   text-align: right;
   margin-top: 10px;
   font-size: 22px;
-  color: #24baa0;
+  color: var(--main-background);
 }
 
 .application__list_arrow {
@@ -199,7 +199,7 @@
   height: 0;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  border-top: 15px solid #24baa0;
+  border-top: 15px solid var(--main-background);
   display:block;
   position: absolute;
   right: 10px;

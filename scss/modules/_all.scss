@@ -10,10 +10,10 @@
 
 @mixin box{
   height: 70vh;
-  width: 25vw;
+  width: 20vw;
   display: flex;
   border-radius: 5px;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 50px;
 };
 
@@ -22,7 +22,7 @@
   content: "";
   position: absolute;
   bottom: 98%;
-  left: 44.74%;
+  left: 46%;
   z-index: 1;
   height: 40px;
   width: 40px;

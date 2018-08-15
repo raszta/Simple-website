@@ -1,5 +1,5 @@
 .container {
-  max-width: 1600px;
+  max-width: 1300px;
   margin: 0 auto;
 
   .row {
@@ -14,7 +14,6 @@
         @media screen and(min-width: 1024px) {
           float: left;
           width: (100% / 12) * $i;
-          margin: 0;
         }
       }
     }
