@@ -3,16 +3,15 @@
   padding:30px 0;
   height: 50vh;
   width: 100%;
-}
-.application__headline {
+
+&__headline {
   color: #575757;
   font-size: 18px;
 }
 
-.application__align-right{
+&__align-right{
   text-align: right;
 }
-
 
 .inline {
   display:inline-block;
@@ -21,11 +20,11 @@
   vertical-align: top;
 }
 
-
-.application__form {
+&__form {
   margin-top:50px;
 }
-.application__drop-down-list {
+
+&__drop-down-list {
   border:1px solid #8de0d2;
   width: 280px;
   height:38px;
@@ -35,18 +34,18 @@
   position: relative;
 }
 
-.application__list_label {
+&__list_label {
   font-size: 30px;
   color: #e2e2e2;
   font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
 }
 
-
-.application__checkbox {
+&__checkbox {
   position: relative;
   padding: 30px 30px 30px 0;
 }
-.application__checkbox-input {
+
+&__checkbox-input {
   display: block;
   opacity: 0;
   height: 48px;
@@ -55,7 +54,7 @@
   cursor: pointer;
 }
 
-.application__checkbox-label {
+&__checkbox-label {
   display: block;
   padding-left: 65px;
   position: relative;
@@ -66,7 +65,7 @@
   cursor: pointer;
 }
 
-.application__checkbox-label::before, .application__checkbox-label::after {
+&__checkbox-label::before, &__checkbox-label::after {
   border: 1px solid var(--main-background);
   content: "";
   display: block;
@@ -76,23 +75,23 @@
   width: 48px;
   top: 0;
 }
-.application__checkbox-label::after {
+
+&__checkbox-label::after {
   background: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%20preserveAspectRatio%3D%22xMidYMid%22%20width%3D%2233.875%22%20height%3D%2233%22%20viewBox%3D%220%200%2033.875%2033%22%3E%0A%20%20%3Cpath%20d%3D%22M9.470%2C15.209%20L14.061%2C24.104%20C14.061%2C24.104%2021.522%2C6.026%2033.287%2C-0.000%20C33.000%2C4.304%2031.852%2C8.035%2033.861%2C12.626%20C28.696%2C13.774%2018.078%2C26.687%2014.635%2C33.000%20C9.756%2C26.974%204.017%2C22.382%20-0.000%2C20.948%20L9.470%2C15.209%20Z%22%20fill%3D%22%2327c7ab%22/%3E%0A%3C/svg%3E%0A") no-repeat center;
   border: 0;
   display: none;
 }
 
-.application__checkbox-input:checked + .application__checkbox-label::after {
+&__checkbox-input:checked + &__checkbox-label::after {
   display: block;
 }
-
 
 .active {
   background: url('../images/form_ok.jpg');
   width: 48px;
   height: 40px;
-
 }
+
 .inline_text {
   display: inline-block;
   width: 228px;
@@ -101,13 +100,13 @@
   margin-left: 15px;
   color: #aeaeae;
 }
-.application__image-part-image{
+
+&__image-part-image{
   margin-top: 110px;
   margin-left: 38px;
 }
 
-
-.application__green_bell {
+&__green_bell {
   background-color: var(--main-background);
   width: 280px;
   height: 6px;
@@ -115,7 +114,7 @@
   margin: 5px 0 5px 0;
 }
 
-.application__summary-panel {
+&__summary-panel {
   background-color: white;
   width:100%;
   height:195px;
@@ -124,7 +123,7 @@
 
 }
 
-.application__green-button {
+&__green-button {
   background-color: var(--main-background);
   color: white;
   text-align:center;
@@ -139,7 +138,8 @@
   border-radius: 8px;
   text-decoration: none;
 }
-.application__panel-left {
+
+&__panel-left {
   display: inline-block;
   width: 185px;
   vertical-align: top;
@@ -148,7 +148,7 @@
   height: 135px;
 }
 
-.application__panel_right {
+&__panel_right {
   display: inline-block;
   width: 100px;
   border-left:1px solid #e7e7e7;
@@ -158,26 +158,28 @@
   border-bottom:1px solid #e7e7e7;
   height: 135px;
 }
-.application__title {
+
+&__title {
   height: 30px;
   color: var(--main-background);
   font-size: 23px;
 }
 
-.application__panel-left--option{
+&__panel-left--option{
   margin-top:10px;
   font-size: 22px;
   color: #5b5a5a;
   display: block;
 }
 
-.application__panel_right--option {
+&__panel_right--option {
   display: block;
   font-size: 22px;
   color: var(--main-background);
   margin-top:10px;
 }
-.application__sum_label{
+
+&__sum_label{
   display: inline-block;
   width: 185px;
   margin-top: 10px;
@@ -185,7 +187,7 @@
   color: #5b5a5a;
 }
 
-.application__sum {
+&__sum {
   display: inline-block;
   width: 100px;
   text-align: right;
@@ -194,7 +196,7 @@
   color: var(--main-background);
 }
 
-.application__list_arrow {
+&__list_arrow {
   width: 0;
   height: 0;
   border-left: 15px solid transparent;
@@ -207,7 +209,7 @@
   cursor: pointer;
 }
 
-.application__list-panel {
+&__list-panel {
   background-color: white;
   border: 1px solid #ccc;
   width: 288px;
@@ -221,9 +223,16 @@
   top: 54px;
   display:none;
 }
-.application__list-panel-item {
+
+&__list-panel-item {
   margin-top:10px;
   cursor: pointer;
   color: #585858;
+}
+
+.show{
+  display: block;
+}
+
 }
 

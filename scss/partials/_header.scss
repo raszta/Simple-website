@@ -10,6 +10,7 @@
 
 &__headline--text {
   color: var(--main-background);
+  text-transform: uppercase;
 }
 
 &__wrap {
@@ -29,14 +30,20 @@
   color: #fff;
   padding: 10px;
   text-decoration: none;
+  margin-right: 10px;
 }
 
-&__item:hover > &__submenu {
+&__item:hover &__submenu {
   display: block;
+  z-index: 1;
 }
 
 &__item {
   position: relative;
+}
+
+&__item :hover{
+  color: #cecece;
 }
 
 &__submenu {
@@ -45,6 +52,7 @@
   top: 240%;
   left: -25%;
   background-color: black;
+  list-style: none;
 }
 
 &__submenu:before {
@@ -64,5 +72,8 @@
   padding: 10px;
   min-width: 120px;
   text-decoration: none;
+}
+&__sublink:hover {
+  background: lighten(black,15%);
 }
 }
