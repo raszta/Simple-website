@@ -44,17 +44,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
       appArr[0].addEventListener("click", function(){
         var option =  this.nextElementSibling;
-        option.classList.toggle("show");
-        var optChil = option.children;    
+        option.classList.toggle("show");       
+        var optChil = option.children;          
         for(var j =0; j<optChil.length;j++){
         optChil[j].addEventListener("click", function(){   
-          option.classList.remove("show");     
+          option.classList.remove("show");            
           var text = "Chair " + this.innerText;
           appTitle.innerText = text;
           labelChoose[0].innerText = this.innerText;  
-          chairPrice.innerText = this.dataset.cost;
-          
-        });        
+          chairPrice.innerText = this.dataset.cost;          
+          chairPrice.dataset.cost = this.dataset.cost;
+          sum = parseInt(chairPrice.dataset.cost);
+          sumShow.innerText = sum;
+        });           
       }
   });
       appArr[1].addEventListener("click", function(){
@@ -68,7 +70,8 @@ document.addEventListener("DOMContentLoaded", function() {
         optionR[0].innerText = this.dataset.cost;
         optionL[0].innerText = "Color: "+text;  
           labelChoose[1].innerText = this.innerText;  
-          sum += optionR[0].innerText;       
+          sum += parseInt(this.dataset.cost);
+          sumShow.innerText = sum;      
         });        
       }
   });
@@ -83,6 +86,8 @@ document.addEventListener("DOMContentLoaded", function() {
           optionR[1].innerText = this.dataset.cost;
           optionL[1].innerText = "Material: " + text; 
           labelChoose[2].innerText = this.innerText;
+          sum += parseInt(this.dataset.cost);
+          sumShow.innerText = sum;
         });                        
       }
   });
@@ -91,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if(appTick.checked == true){
     optionR[2].innerText = this.dataset.cost;
     optionL[2].innerText = "Transport ";  
-    sum = parseInt(this.dataset.cost);
+    sum += parseInt(this.dataset.cost);
     } else{
       optionR[2].innerText = '';
       optionL[2].innerText = "";
