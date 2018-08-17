@@ -37,11 +37,27 @@
         <div class="col-12">
           <div class="slider__gallery">
             <div class="slider__image">
+              <img src="images/black_chair.png" alt="Black chair for You!" class="slider__image-pic">
             </div>
             <div class="slider__article">
               <h2 class="slider__headline">
                 sit 
                 <span class="slider__headline--text">on</span> our 
+                <span class="slider__headline--text">chair</span>
+              </h2>
+              <p class="slider__text">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <button class="slider__button--more">More info</button>
+            </div>
+            <div class="slider__image">
+              <img src="images/orange_chair.png" alt="Orange chair for You!" class="slider__image-pic">
+            </div>
+            <div class="slider__article">
+              <h2 class="slider__headline">
+                Very
+                <span class="slider__headline--text">nice</span>, comfortable 
                 <span class="slider__headline--text">chair</span>
               </h2>
               <p class="slider__text">
@@ -148,7 +164,6 @@
                 <h3 class="application__headline">Compose your own CHAIR!</h3>
                 <span class="application__green_bell"></span>
               </header>
-
               <div class="application__form">
                 <div class="application__drop-down-list">
                   <span class="application__list_label">Choose name</span>
@@ -177,24 +192,19 @@
                   </ul>
                 </div>
                 <div class="application__checkbox">
-                  <input class="application__checkbox-input" type="checkbox" id="transport" data-transport-price="200">
+                  <input class="application__checkbox-input" type="checkbox" id="transport" data-cost="200">
                   <label class="application__checkbox-label" for="transport">Transport</label>
                 </div>
-                <!--<div class="checkbox"></div>-->
-                <!--<span class="list_label inline_text">Transport</span>-->
               </div>
             </section>
-
             <section class="application__image-part inline">
-              <img class="application__image-part-image" src="images/red_chair.png">
+              <img class="application__image-part-image" src="images/red_chair.png" alt="Red chair">
             </section>
-
             <section class="application__summary-part inline">
               <header class="application__align-right">
                 <h3>Total</h3>
                 <span class="application__green_bell"></span>
               </header>
-
               <div class="application__summary-panel">
                 <div class="application__panel-left">
                   <h4 class="application__title application__title--left">Your Chair</h4>
@@ -203,13 +213,13 @@
                   <span class="application__panel-left--option"></span>
                 </div>
                 <div class="application__panel_right">
-                  <h4 class="application__title application__title--right"></h4>
+                  <span class="application__title--right"></span>
                   <span class="application__panel_right--option"></span>
                   <span class="application__panel_right--option"></span>
                   <span class="application__panel_right--option"></span>
                 </div>
                 <div class="application__sum_label">SUM</div>
-                <div class="application__sum"><strong></strong></div>
+                <div class="application__sum"><strong class="application__sum-place"></strong></div>
               </div>
               <a href="" class="application__green-button">Order</a>
             </section>
@@ -226,14 +236,17 @@
          <div class="form__place">
           <form action=""class="form__application">
             <h2 class="form__headline">Contact</h2> 
-            <input type="text" placeholder="Name" class="form__input--name">
-            <input type="email" placeholder="Email" class="form__input--email">
-            <textarea name="message" placeholder="Message" id="" cols="30" rows="10" class="form__textarea"></textarea>
+            <label for="name"></label>
+            <input type="text" placeholder="Name" id="name" class="form__input--name">
+            <label for="email"></label>
+            <input type="email" placeholder="Email" id="email" class="form__input--email">
+            <label for="message"></label>
+            <textarea name="message" placeholder="Message" id="message" cols="30" rows="10" class="form__textarea"></textarea>
           <button type="submit" class="form__button">Send</button>
           </form>
           <input type="checkbox" class="form__checkbox" id="data">
           <label class="form__checkbox-text" for="data">I hereby give consent for my personal data</label>
-          <img src="images/orange_chair.png" alt="" class="form__image">
+          <img src="images/orange_chair.png" alt="Orange chair" class="form__image">
           </div>
       </div>     
     </div>
