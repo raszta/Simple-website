@@ -1,5 +1,5 @@
 .slider{
-    height: calc(60vh - 50px);
+    height: calc(60vh - 3.12rem);
     background-image: linear-gradient( white, #eff2f7, #c8cbd1);
     display:flex;
     align-items: center;
@@ -26,14 +26,14 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        font-size: 20px;
-        margin-right: 30px;
+        font-size: 1.25rem;
+        margin-right: 2rem;
 
         .slider__headline{
           color: black;
           text-transform: uppercase;
-          font-size: 40px;
-          margin-bottom: 20px;
+          font-size: 2.5rem;
+          margin-bottom: 1.25rem;
         }
 
         .slider__headline--text{
@@ -43,11 +43,11 @@
         .slider__button--more{
           color: white;
           background: var(--main-background);
-          border-radius: 10px;
-          font-size: 25px;
-          height: 50px;
-          width: 250px;
-          margin-top: 20px;
+          border-radius: 0.63rem;
+          font-size: 1.57rem;
+          height: 3.125rem;
+          width: 15.62rem;
+          margin-top: 1.25rem;
         }
       }
 

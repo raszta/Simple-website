@@ -29,11 +29,11 @@
     }
 
       &__checkbox-text {   
-          width: 27%;   
-          line-height: 30px;  
+        width: 27%;   
+        line-height: 1.9rem;  
         display: block;
         position: relative;
-        font-size: 20px;
+        font-size: 1.25rem;
         color: #cecece;
         cursor: pointer;
         position: absolute;
@@ -45,9 +45,9 @@
     border: 1px solid var(--main-background);
     content: "";
     display: block;
-    height: 48px;
+    height: 3rem;
     position: absolute;
-    width: 48px;
+    width: 3rem;
     right: 103%;
     bottom: 13%;
     }
@@ -106,6 +106,5 @@
 
     ::placeholder{
         color: #e2e2e2;
-
     }
 }

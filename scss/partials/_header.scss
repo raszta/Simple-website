@@ -1,7 +1,7 @@
 .header {
   background-color: black;
   color: white;
-  padding: 10px 0;
+  padding: 0.63rem 0;
 
 
 &__headline {
@@ -28,9 +28,9 @@
 
 &__link {
   color: #fff;
-  padding: 10px;
+  padding: 0.63rem;
   text-decoration: none;
-  margin-right: 10px;
+  margin-right: 0.63rem;
 }
 
 &__item:hover &__submenu {
@@ -57,13 +57,13 @@
 
 &__submenu:before {
   content: "";
-  height: 0px;
-  width: 0px;
-  border: 10px solid transparent;
-  border-bottom: 10px solid black;
+  height: 0;
+  width: 0;
+  border: 0.63rem solid transparent;
+  border-bottom: 0.63rem solid black;
   position: absolute;
-  top: -20px;
-  left: calc(50% - 10px);
+  top: -1.25rem;
+  left: calc(50% - 0.63rem);
 }
 
 &__sublink {
