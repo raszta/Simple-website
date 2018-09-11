@@ -36,7 +36,7 @@
 
 &__list_label {
   font-size: 30px;
-  color: #e2e2e2;
+  color: var(--main-background);
   font-family: 'ralewaylight', Arial, Tahoma, sans-serif;
 }
 
@@ -228,7 +228,7 @@
   display:none;
 }
 
-&__list-panel-item {
+&__list-panel-item--chair, &__list-panel-item--color, &__list-panel-item--material{
   margin-top:10px;
   cursor: pointer;
   color: #585858;
@@ -238,4 +238,3 @@
   display: block;
 }
 }
-

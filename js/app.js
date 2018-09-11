@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
-  var prevBtn = document.querySelector(".slider__button--prev");
-  var nextBtn = document.querySelector(".slider__button--next");
-  var sliderImage = document.querySelectorAll(".slider__image");
-  var sliderArticle = document.querySelectorAll(".slider__article");
-  var counter =0;
+  const prevBtn = document.querySelector(".slider__button--prev");
+  const nextBtn = document.querySelector(".slider__button--next");
+  const sliderImage = document.querySelectorAll(".slider__image");
+  const sliderArticle = document.querySelectorAll(".slider__article");
+  let counter =0;
   
 
   sliderImage[counter].classList.add('visible');
@@ -30,78 +30,69 @@ document.addEventListener("DOMContentLoaded", function() {
     sliderImage[counter].classList.add("visible");
     sliderArticle[counter].classList.add("visible");
   });
-
-
-  var appTitle = document.querySelector(".application__title--left");
-  var appArr = document.querySelectorAll(".application__list_arrow");
-  var appTick = document.querySelector(".application__checkbox-input");
+//application choosing chair
+  const appColor = document.querySelectorAll(".application__list-panel-item--color");
+  const appMaterial = document.querySelectorAll(".application__list-panel-item--material");
+  const appChair = document.querySelectorAll(".application__list-panel-item--chair");
+  const appArr = document.querySelectorAll(".application__list_arrow");
+  const appTick = document.querySelector(".application__checkbox-input");
+  let sumShow = document.querySelector(".application__sum-place");
+  const optionL = document.querySelectorAll(".application__panel-left--option");
+  const chairPrice = document.querySelector(".application__title--right");
+  const chairName = document.querySelector(".application__title--left");
   var optionR = document.querySelectorAll(".application__panel_right--option");
-  var optionL = document.querySelectorAll(".application__panel-left--option");
-  var chairPrice = document.querySelector(".application__title--right");
-  var sumShow = document.querySelector(".application__sum-place");
-  var labelChoose = document.querySelectorAll(".application__list_label");
-  var sum = 0;
+ 
+  function orderSum() {
+    sumShow.innerText = Number(optionR[2].innerText) + Number(chairPrice.innerText) + Number(optionR[0].innerText) + Number(optionR[1].innerText);
+  }
 
-      appArr[0].addEventListener("click", function(){
-        var option =  this.nextElementSibling;
-        option.classList.toggle("show");       
-        var optChil = option.children;          
-        for(var j =0; j<optChil.length;j++){
-        optChil[j].addEventListener("click", function(){   
-          option.classList.remove("show");            
-          var text = "Chair " + this.innerText;
-          appTitle.innerText = text;
-          labelChoose[0].innerText = this.innerText;  
-          chairPrice.innerText = this.dataset.cost;          
-          chairPrice.dataset.cost = this.dataset.cost;
-          sum = parseInt(chairPrice.dataset.cost);
-          sumShow.innerText = sum;
-        });           
-      }
+  appArr.forEach(function(el){
+    el.addEventListener('click',function(){
+    this.nextElementSibling.classList.toggle("show");    
   });
-      appArr[1].addEventListener("click", function(){
-        var option =  this.nextElementSibling;
-        option.classList.toggle("show");
-        var optChil = option.children;    
-        for(var j =0; j<optChil.length;j++){
-        optChil[j].addEventListener("click", function(){   
-          option.classList.remove("show");        
-          var text = this.innerText;
+});
+
+  appChair.forEach(function(el){
+      el.addEventListener('click', function () {
+        this.parentElement.classList.toggle("show");
+        this.parentElement.parentElement.firstElementChild.innerText = this.innerText;    
+        chairPrice.innerText = this.dataset.cost;
+        chairName.innerText = 'Chair ' + this.innerText;
+        orderSum();
+    });
+  });
+  appMaterial.forEach(function(el){
+      el.addEventListener('click', function () {
+        this.parentElement.classList.toggle("show");  
+        this.parentElement.parentElement.firstElementChild.innerText = this.innerText;     
+        optionR[1].innerText = this.dataset.cost;
+        optionL[1].innerText =  this.innerText;
+        orderSum();
+    });
+  });
+
+  appColor.forEach(function(el){
+      el.addEventListener('click', function () {
+        this.parentElement.classList.toggle("show");  
+        this.parentElement.parentElement.firstElementChild.innerText = this.innerText;     
         optionR[0].innerText = this.dataset.cost;
-        optionL[0].innerText = "Color: "+text;  
-          labelChoose[1].innerText = this.innerText;  
-          sum += parseInt(this.dataset.cost);
-          sumShow.innerText = sum;      
-        });        
-      }
+        optionL[0].innerText =  this.innerText;
+        orderSum();
+    });
   });
-      appArr[2].addEventListener("click", function(){
-        var option =  this.nextElementSibling;
-        option.classList.toggle("show");
-        var optChil = option.children;    
-        for(var j =0; j<optChil.length;j++){
-        optChil[j].addEventListener("click", function(){ 
-          option.classList.remove("show");           
-          var text = this.innerText;
-          optionR[1].innerText = this.dataset.cost;
-          optionL[1].innerText = "Material: " + text; 
-          labelChoose[2].innerText = this.innerText;
-          sum += parseInt(this.dataset.cost);
-          sumShow.innerText = sum;
-        });                        
-      }
-  });
+
  
   appTick.addEventListener('change', function(){
     if(appTick.checked == true){
-    optionR[2].innerText = this.dataset.cost;
-    optionL[2].innerText = "Transport ";  
-    sum += parseInt(this.dataset.cost);
+      optionR[2].innerText = this.dataset.cost;
+      optionL[2].innerText = "Transport ";  
+      orderSum();
     } else{
-      optionR[2].innerText = '';
+      optionR[2].innerText = '0';
       optionL[2].innerText = "";
-      sum -= 200;      
-    }  
-    sumShow.innerText = sum;
+      orderSum();
+    }      
   });
 });
+
+
