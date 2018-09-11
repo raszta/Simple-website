@@ -49,15 +49,25 @@
           width: 15.62rem;
           margin-top: 1.25rem;
         }
+        .slider__button--more:hover{
+    background: darken(#d9e2f7,5%);
+    color: black;
+  }
       }
 
       .slider__button--prev{
         @include button;
         left:0;
       }
+      .slider__button--prev:hover{
+       color:black;
+      }
       .slider__button--next{
         @include button;
         right:0;
+      }
+      .slider__button--next:hover{
+        color:black;
       }
       .visible{
       display:inline;

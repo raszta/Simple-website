@@ -73,6 +73,10 @@
        color: #fff;
        font-size: 2rem;
     }
+   &__button:hover{
+    background: darken(#d9e2f7,5%);
+    color: black;
+  }
 
     &__image{
         width: 30%;

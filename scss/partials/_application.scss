@@ -137,6 +137,10 @@
   border-radius: 0.5rem;
   text-decoration: none;
 }
+&__green-button:hover{
+    background: darken(#d9e2f7,5%);
+    color: black;
+  }
 
 &__panel-left {
   display: inline-block;
